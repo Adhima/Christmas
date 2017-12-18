@@ -1,0 +1,88 @@
+diena@student11-desktop:~$ git config --global user.name "anciuvis"
+diena@student11-desktop:~$ git config --global user.email "nonofthem@gmail.com"
+diena@student11-desktop:~$ cd '/home/diena/Desktop/blaghg' 
+diena@student11-desktop:~/Desktop/blaghg$ git init
+Initialized empty Git repository in /home/diena/Desktop/blaghg/.git/
+diena@student11-desktop:~/Desktop/blaghg$ git commit -m "first"
+On branch master
+
+Initial commit
+
+Untracked files:
+	css/
+	index.html
+
+nothing added to commit but untracked files present
+diena@student11-desktop:~/Desktop/blaghg$ git add .
+diena@student11-desktop:~/Desktop/blaghg$ git commit -m "first"
+[master (root-commit) aa69f36] first
+ 2 files changed, 10 insertions(+)
+ create mode 100644 css/styles.css
+ create mode 100644 index.html
+diena@student11-desktop:~/Desktop/blaghg$ git remote add origin git@github.com:anciuvis/Christmas.git
+diena@student11-desktop:~/Desktop/blaghg$ git push -u origin master
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+diena@student11-desktop:~/Desktop/blaghg$ ssh-keygen -t rsa -b 4096 -C "nonofthem@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/diena/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/diena/.ssh/id_rsa.
+Your public key has been saved in /home/diena/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:t9Gow6w4ootdEGxEzka5r4oZbOy7A4fxuzokevCpvWY nonofthem@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+| .+.             |
+| *.              |
+|  B.             |
+|.o..       o     |
+| +..    S + .    |
+|B.o..  o o o     |
+|*B +.   = .      |
+|B*E... . .       |
+|X#O+...          |
++----[SHA256]-----+
+diena@student11-desktop:~/Desktop/blaghg$ eval "$(ssh-agent -s)"
+Agent pid 6352
+diena@student11-desktop:~/Desktop/blaghg$ ssh-add ~/.ssh/id_rsa
+Identity added: /home/diena/.ssh/id_rsa (/home/diena/.ssh/id_rsa)
+diena@student11-desktop:~/Desktop/blaghg$ ^C
+diena@student11-desktop:~/Desktop/blaghg$ git push -u origin masterCounting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 395 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To git@github.com:anciuvis/Christmas.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+diena@student11-desktop:~/Desktop/blaghg$ git push -u origin master
+Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 639 bytes | 0 bytes/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To git@github.com:anciuvis/Christmas.git
+   aa69f36..2ba1b8a  master -> master
+Branch master set up to track remote branch master from origin.
+diena@student11-desktop:~/Desktop/blaghg$ git push -u origin master
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 15.74 KiB | 0 bytes/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To git@github.com:anciuvis/Christmas.git
+   2ba1b8a..763ce9f  master -> master
+Branch master set up to track remote branch master from origin.
+diena@student11-desktop:~/Desktop/blaghg$ git push -u origin master
+
