@@ -1,0 +1,24 @@
+* {
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, .Christmas{
+  height: 100%;
+  background: #C32525;
+  /*keicia spalva*/
+}
+
+.Christmas {
+  padding-top: 100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 60px;
+  font-family: 'Open Sans', sans-serif;
+}
